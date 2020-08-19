@@ -51,9 +51,9 @@ for a in range(0,360,1):
 np.save('cube.npy', np.array(frame))
 
 # 显示
-for n,img_dep in enumerate(frame_dep):
+for n,img in enumerate(frame):
     plt.clf()
-    plt.imshow(img_dep,cmap='jet')
+    plt.imshow(img,cmap='jet')
     plt.title(str(n))
     plt.show(block=False)
     plt.pause(0.01)
