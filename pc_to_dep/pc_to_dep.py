@@ -23,7 +23,7 @@ class pc_to_dep_c:
         pc=pc.reshape(-1,3)
         
         # 滤除镜头后方的点
-        valid=pc[:,2]>EPS
+        valid=pc[:,2]>self.eps
         z=pc[valid,2]
         
         # 点云反向映射到像素坐标位置
