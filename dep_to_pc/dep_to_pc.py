@@ -34,7 +34,7 @@ if __name__=='__main__':
     conv=dep_to_pc_c(CAM_FX,CAM_FY,CAM_CX,CAM_CY,CAM_WID,CAM_HGT)
 
     # 加载数据
-    img_dep=np.genfromtxt('img_dep_640x480.csv', delimiter=',').astype(np.float32)
+    img_dep=np.genfromtxt('dep.csv', delimiter=',').astype(np.float32)
 
     # 从CSV文件加载点云并显示
     pc=conv.to_pc(img_dep)

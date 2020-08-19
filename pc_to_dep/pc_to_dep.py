@@ -1,4 +1,4 @@
-﻿#!/usr/bin/python3
+#!/usr/bin/python3
 # coding=utf-8
 
 import numpy as np
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     conv=pc_to_dep_c(CAM_FX,CAM_FY,CAM_CX,CAM_CY,CAM_WID,CAM_HGT,EPS)
     
     # 加载点云数据
-    pc=np.genfromtxt('pc_rot.csv', delimiter=',').astype(np.float32)
+    pc=np.genfromtxt('pc.csv', delimiter=',').astype(np.float32)
     
     # 转换
     img_dep=conv.to_dep(pc)
