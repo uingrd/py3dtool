@@ -8,3 +8,9 @@ spin_cube.py        code that generate depth image sequence of a spin cube
 
 head_dep.csv        unit test data for space_filter.py (depth image from TOF camera)
 head_amp.csv        unit test data for space_filter.py (amplitude image from TOF camera) 
+
+
+usage
+-----
+please check the unit test in the end of file space_filter.py & time_filter.py
+note that u need to run spin_cube.py to generate cube.npy before run unit test code of time_filter.py
