@@ -62,7 +62,7 @@ if __name__=='__main__':
     import matplotlib.pyplot as plt
     from mpl_toolkits.mplot3d import Axes3D
 
-    ax = plt.figure().gca(projection='3d')
+    ax=plt.axes(projection='3d')
     ax.plot(pc[:,0],pc[:,1],pc[:,2],'k.',markersize=0.02)
     ax.set_xlabel('x')
     ax.set_ylabel('y')
