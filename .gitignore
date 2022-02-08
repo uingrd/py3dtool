@@ -1,0 +1,7 @@
+
+dep_filter/cube.npy
+dep_filter/spin_cube.gif
+dep_filter/spin_cube_hf.gif
+dep_filter/spin_cube_lf.gif
+dep_filter/spin_cube_med.gif
+*.pyc

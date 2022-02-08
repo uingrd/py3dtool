@@ -2,6 +2,7 @@
 # coding=utf-8
 
 import numpy as np
+import cv2
 
 # 相机参数
 CAM_WID,CAM_HGT = 640,480
@@ -20,7 +21,11 @@ if True: imgf=cv2.bilateralFilter(imgf,5,1,1)
 # 显示原始数据
 import pylab as plt
 import matplotlib
-matplotlib.use('tkagg')
+#matplotlib.use('tkagg')
+
+CAM_FX,CAM_FY   = 795.209,793.957
+CAM_CX,CAM_CY   = 332.031,231.308
+DMIN,DMAX=0.5,0.8
 
 plt.clf()
 plt.subplot(1,2,1)
@@ -42,9 +47,6 @@ plt.title('filter')
 plt.show()
 
 ## 以点云形式显示结果
-CAM_FX,CAM_FY   = 795.209,793.957
-CAM_CX,CAM_CY   = 332.031,231.308
-
 tab_x,tab_y=np.meshgrid(range(CAM_WID),range(CAM_HGT))  # 构建点云变换的速算表格
 tab_x=tab_x.astype(np.float32)-CAM_CX
 tab_y=tab_y.astype(np.float32)-CAM_CY
@@ -63,7 +65,6 @@ import sys
 sys.path.append("../viewer")    # 同级的viewer目录
 from pc_view import *
 
-DMIN,DMAX=0.5,0.8
 pc_view(pc,CAM_FX,CAM_FY,CAM_CX,CAM_CY,CAM_WID,CAM_HGT,dmin=DMIN,dmax=DMAX)
 
 
