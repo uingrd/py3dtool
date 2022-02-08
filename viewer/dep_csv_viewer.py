@@ -12,7 +12,8 @@ from IPython import embed
 def plot_pc(pc,title='',show=True,ax=None):
     import matplotlib.pyplot as plt
     from mpl_toolkits.mplot3d import Axes3D
-    if ax is None: ax=plt.figure().gca(projection='3d')
+    #if ax is None: ax=plt.figure().gca(projection='3d')
+    if ax is None: ax=plt.axes(projection='3d')
     ax.plot(pc[:,0],pc[:,1],pc[:,2],'.k',markersize=0.1)
     ax.set_title(title)
     ax.set_xlabel('x')
