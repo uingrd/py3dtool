@@ -122,10 +122,11 @@ def pc_view(pc,\
         
         # 刷新屏幕显示
         cv2.imshow(name, img_rgb)
-        
+
         # 检查用户界面操作
         key=cv2.waitKey(1)&0xFF
-        if key==ord('q') or key==27 or cv2.getWindowProperty(name,cv2.WND_PROP_VISIBLE) < 1:
+        if key==ord('q') or key==27:# or cv2.getWindowProperty(name,cv2.WND_PROP_VISIBLE) < 1:
+            print('[INF] quit')
             break
         elif key==ord('r'):
             ax=ay=0.0   # 点云旋转角度
