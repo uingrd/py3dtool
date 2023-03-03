@@ -16,8 +16,9 @@ def find_knn_simple(p,pc,k=1,r=np.inf):
         
     dist=np.sum((pc-p)**2,axis=1)
     idx=np.argsort(dist)[:k]
-    return [pc[i] for i in idx if dist[i]<r**2]
-
+    out=[pc[i] for i in idx if dist[i]<r**2]
+    
+    return out
 
 if __name__=='__main__':
     np.random.seed(1234)
